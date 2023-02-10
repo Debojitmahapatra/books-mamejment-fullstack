@@ -8,12 +8,22 @@ const reviewSchema = new mongoose.Schema(
       ref: "Book",
       required: true,
     },
+    bookName:{
+      type:String,
+  },
+  bookImage:{
+      type:String,
+  },
     reviewedBy: {
       type: String,
       default: "Guest",
      // required: true,
       trim:true
     },
+    name:{
+      type: String,
+      default:'Geust',
+   },
     reviewedAt: {
       type: Date,
       required: true,

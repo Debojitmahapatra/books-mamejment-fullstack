@@ -9,6 +9,16 @@ const BooksSchema = new mongoose.Schema({
         unique: true,
         trim: true
     },
+    price: {
+        type: String,
+        required: true,
+        trim: true,
+      },
+      image: {
+        type: String,
+        required: true,
+        trim: true,
+      },
     excerpt: {
         type: String,
         required: true,
@@ -20,6 +30,9 @@ const BooksSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
+    author: {
+        type: String,
+      },
 
 
     ISBN: {
@@ -60,9 +73,6 @@ const BooksSchema = new mongoose.Schema({
     releasedAt: {
         type:Date,
         required: true,
-    },
-    bookCover:{
-        type: String,
     }
 
 }, { timestamps: true })

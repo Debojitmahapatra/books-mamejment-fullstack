@@ -8,12 +8,16 @@ const userSchema = new mongoose.Schema(
       required: true,
       enum: ['Mr', 'Mrs', 'Miss']
     },
-
+  
     name: {
       type: String,
       required: true,
       trim: true
     },
+    image: {
+      type : String,
+      require: true
+  },
 
     phone: {
       type: String,
@@ -36,9 +40,9 @@ const userSchema = new mongoose.Schema(
     },
 
     address: {
-      street: { type: String },
-      city: { type: String },
-      pincode: { type: String },
+      street: { type: String,trim:true },
+      city: { type: String,trim:true },
+      pincode: { type: String,trim:true },
     }
   },
   { timestamps: true }
